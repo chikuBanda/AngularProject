@@ -267,6 +267,26 @@
       "password": "123456789",
       "ville": "Tranas",
       "adress": "Sweeden"
+    },
+    {
+      "id": 26,
+      "nom": "banda",
+      "prenom": "chiku",
+      "email": "chikubanda.cb@gmail.com",
+      "tel": "",
+      "password": "seamless",
+      "ville": "",
+      "adress": ""
+    },
+    {
+      "id": 27,
+      "nom": "eucalyptus",
+      "prenom": "some variety",
+      "email": "chikubanda.cb@gmail.com",
+      "tel": "",
+      "password": "11111111",
+      "ville": "",
+      "adress": ""
     }
   ],
   "reclamation": [
@@ -394,6 +414,30 @@
       "Numero_dossier": "121",
       "Date_commande": "2020-02-11T23:00:00.000Z",
       "action": ""
+    }
+  ],
+  "Arbres": [
+    {
+      "id": "id1",
+      "essence": "some variety",
+      "variete": "banda",
+      "alignement": "",
+      "circonference": 0,
+      "atteintesPhysiologique": "none",
+      "contraintesBatiment": "",
+      "defautsMecaniques": "none",
+      "distanceAuBati": 0,
+      "etatPhysiologique": "",
+      "hauter": 0,
+      "incedentRacine": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "pathogene": "none",
+      "photos": [
+        "../../../assets/img/gettyimages-164850397-612x612.jpg"
+      ]
     }
   ]
 }

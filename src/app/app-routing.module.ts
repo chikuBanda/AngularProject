@@ -18,6 +18,11 @@ import { PhytosanitaireComponent } from "./Phytosanitaire/phytosanitaire/phytosa
 import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
 import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
 import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
+import { ListArbresComponent } from './list-arbres/list-arbres.component';
+import { DetailArbreComponent } from './list-arbres/list/detail-arbre/detail-arbre.component';
+import { ModifierArbreComponent } from './list-arbres/list/modifier-arbre/modifier-arbre.component';
+import { NouveauArbreComponent } from './nouveau-arbre/nouveau-arbre.component';
+import { ListComponent } from './list-arbres/list/list.component';
 
 const routes: Routes = [
   {
@@ -85,19 +90,38 @@ const routes: Routes = [
       {
         path: "updateExpertise",
         component: UpdateExpertiseComponent
-      }
+      },
+      {
+        path: 'listAbres', component: ListArbresComponent,
+        children: [
+          {
+            path: '', component: ListComponent
+          },
+          {
+            path: 'detailsArbre/:id', component: DetailArbreComponent
+          },
+          {
+            path: 'modifierArbre/:id', component: ModifierArbreComponent
+          }
+        ]
+      },
+      {
+        path: 'nouveauArbre', component: NouveauArbreComponent
+      },
+
     ]
   },
   {
     path: "",
     redirectTo: "/index",
     pathMatch: "full"
-  },
-  {
+  }
+
+  /*{
     path: "**",
     redirectTo: "/index",
     pathMatch: "full"
-  }
+  }*/
 ];
 
 @NgModule({

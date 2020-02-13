@@ -1,5 +1,19 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+import {
+  MatButtonModule,
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatSelectModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatTabsModule,
+  MatTableModule
+ } from '@angular/material';
+
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -40,6 +54,13 @@ import { AddExpertiseComponent } from "./add-expertise/add-expertise.component";
 import { ExpertiseService } from "./services/expertise.service";
 import { ListExpertiseComponent } from "./list-expertise/list-expertise.component";
 import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.component";
+import { ListArbresComponent } from './list-arbres/list-arbres.component';
+import { ArbreComponent } from './list-arbres/list/arbre/arbre.component';
+import { DetailArbreComponent } from './list-arbres/list/detail-arbre/detail-arbre.component';
+import { ModifierArbreComponent, DeleteDialogComponent, SaveDialogComponent } from './list-arbres/list/modifier-arbre/modifier-arbre.component';
+import { NouveauArbreComponent } from './nouveau-arbre/nouveau-arbre.component';
+import { ListComponent } from './list-arbres/list/list.component';
+
 
 @NgModule({
   declarations: [
@@ -65,7 +86,16 @@ import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.co
     PlantationComponent,
     AddExpertiseComponent,
     ListExpertiseComponent,
-    UpdateExpertiseComponent
+    UpdateExpertiseComponent,
+    ListArbresComponent,
+    ArbreComponent,
+    DetailArbreComponent,
+    ModifierArbreComponent,
+    SaveDialogComponent,
+    DeleteDialogComponent,
+    NouveauArbreComponent,
+    ListComponent
+
   ],
   imports: [
     BrowserModule,
@@ -77,10 +107,14 @@ import { UpdateExpertiseComponent } from "./update-expertise/update-expertise.co
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule,
-    MatSnackBarModule
+    HttpClientModule
   ],
-  entryComponents: [ParametreComponent, ProfileComponent],
+  entryComponents: [
+    ParametreComponent,
+    ProfileComponent,
+    SaveDialogComponent,
+    DeleteDialogComponent
+  ],
 
   providers: [
     PhytosanitaireService,
